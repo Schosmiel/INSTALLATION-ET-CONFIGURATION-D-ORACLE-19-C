@@ -18,7 +18,7 @@ Before installing Oracle Database, it is important to ensure that your system me
 . Memory: At least 2 GB of RAM is required for a basic installation.
 
 
-###Download and Installation
+### Download and Installation
 
 
 Download the Oracle Database installation file from the official Oracle website.
@@ -26,7 +26,7 @@ Download the Oracle Database installation file from the official Oracle website.
 2- Launch the installation executable and follow the on-screen instructions.
 3- When the installation is complete, you can create a database instance using the Database Configuration Assistant provided with Oracle Database.
 
-#Documentation
+## Documentation
 
 The official documentation for Oracle Database is available on the Oracle website. 
 It includes installation guides, reference guides, and user manuals.
