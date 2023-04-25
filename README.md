@@ -13,11 +13,11 @@ It is widely used in industry to store, organize, and manage large-scale data.
 
 Before installing Oracle Database, it is important to ensure that your system meets the following minimum requirements:
 
-. Operating System: Oracle Database is compatible with the following operating systems: Linux, Windows, macOS, Solaris, and HP-UX.
+1- Operating System: Oracle Database is compatible with the following operating systems: Linux, Windows, macOS, Solaris, and HP-UX.
 
-. Disk Space: At least 10 GB of free disk space should be available.
+2- Disk Space: At least 10 GB of free disk space should be available.
 
-. Memory: At least 2 GB of RAM is required for a basic installation.
+3- Memory: At least 2 GB of RAM is required for a basic installation.
 
 
 ### Download and Installation
