@@ -1,0 +1,28 @@
+
+###
+### Restauration apres perte totale de la base 
+###
+# Il y aura probablement une perte de donnees, inevitable a cause des REDO perdus.
+
+
+# A lancer comme suit : 
+#	cat restauration_base_complete.rcv | rman target /
+#	ou bien copier/coller manuel dans la session RMAN
+
+
+# Hypothese : tous les fichiers de la base sont perdus, y compris SPFILE et REDO
+#		      sauf sauvegardes et zone flash.
+
+# 2 erreurs normales et non bloquantes sont attendues.
+
+set echo on
+startup force nomount;
+restore spfile from autobackup 
+	db_recovery_file_dest='/u01/app/oracle/fast_recovery_area' 
+	db_name=COMPTA;
+startup force nomount;
+restore controlfile from autobackup;
+alter database mount;
+restore database;
+recover database;
+alter database open resetlogs;

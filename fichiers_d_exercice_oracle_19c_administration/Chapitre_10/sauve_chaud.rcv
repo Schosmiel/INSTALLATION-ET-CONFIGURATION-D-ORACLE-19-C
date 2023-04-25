@@ -1,0 +1,11 @@
+###  
+### Script RMAN de sauvegarde à chaud (base ouverte)
+###
+
+backup
+# as compressed backupset
+database
+plus archivelog delete input;
+
+delete noprompt obsolete;
+

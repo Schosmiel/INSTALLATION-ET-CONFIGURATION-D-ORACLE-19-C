@@ -1,0 +1,11 @@
+### Script de sauvegarde RMAN base fermee
+### enregistre comme /home/oracle/rman/sauve_froid.rcv
+
+SHUTDOWN IMMEDIATE;
+STARTUP MOUNT;
+BACKUP DEVICE TYPE DISK TAG 'FROID' DATABASE;
+ALTER DATABASE OPEN;
+
+
+### Syntaxe d'execution
+rman target sys/oracle@COMPTA @/home/oracle/rman/sauve_froid.rcv

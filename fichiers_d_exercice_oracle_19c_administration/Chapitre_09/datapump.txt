@@ -1,0 +1,30 @@
+Export du schéma HR de la base COMPTA, pour l'importer dans le schéma HRBIS de la base RH.
+
+##############
+### EXPORT ###
+##############
+
+# SHELL
+mkdir -p /u01/app/oracle/export
+
+# SQL dans la base source
+create or replace directory repexp as '/u01/app/oracle/export';
+grant read, write on directory repexp to system;
+
+# SHELL
+expdp system/oracle@COMPTA schemas=HR directory=repexp reuse_dumpfiles=YES dumpfile=hr.dmp logfile=exp_hr.log flashback_time=systimestamp exclude=INDEX
+
+
+##############
+### IMPORT ###
+##############
+
+# SHELL
+# mkdir -p /u01/app/oracle/export 	#Si n'existe pas encore
+
+# SQL dans la base cible
+create or replace directory repexp as '/u01/app/oracle/export';
+grant read, write on directory repexp to system;
+
+# SHELL
+impdp system/oracle@RH schemas=HR directory=repexp dumpfile=hr.dmp logfile=imp_hrbis.log remap_schema=HR:HRBIS remap_tablespace=SYSAUX:USERS table_exists_action=replace

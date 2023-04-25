@@ -1,0 +1,13 @@
+### 
+### Script de restauration a l'etat de la derniere sauvegarde PRISE A FROID
+### 
+
+run
+{
+	shutdown abort;
+	startup nomount;
+	restore controlfile from autobackup;
+	alter database mount;
+	restore database;
+	alter database open resetlogs;
+}
