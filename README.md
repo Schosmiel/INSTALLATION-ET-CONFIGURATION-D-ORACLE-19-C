@@ -2,14 +2,14 @@
 INSTALLATION -  CONFIGURATION D'ORACLE 19 C ET QUELQUES SERIES D'EXERCICES 
 
 
-#Oracle Database
+# Oracle Database
 
 Oracle Database is a relational database management solution developed by Oracle Corporation. 
 It is widely used in industry to store, organize, and manage large-scale data.
 
 ## Installation
 
-###Prerequisites
+### Prerequisites
 
 Before installing Oracle Database, it is important to ensure that your system meets the following minimum requirements:
 
