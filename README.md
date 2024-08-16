@@ -24,8 +24,11 @@ Before installing Oracle Database, it is important to ensure that your system me
 
 
 Download the Oracle Database installation file from the official Oracle website.
+
 1- Extract the installation files to a directory of your choice.
+
 2- Launch the installation executable and follow the on-screen instructions.
+
 3- When the installation is complete, you can create a database instance using the Database Configuration Assistant provided with Oracle Database.
 
 ## Documentation
